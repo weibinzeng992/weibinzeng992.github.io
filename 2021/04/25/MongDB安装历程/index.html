@@ -6,15 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/6 | Hexo</title>
+  <title>MongDB安装历程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/06/index.html">
+  <meta name="description" content="这篇教程写的时候有些着急，有不足的地方还请谅解。谢谢~​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongDB安装历程">
+<meta property="og:url" content="http://yoursite.com/2021/04/25/MongDB%E5%AE%89%E8%A3%85%E5%8E%86%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="这篇教程写的时候有些着急，有不足的地方还请谅解。谢谢~​">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425211914642.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021042521210735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212128750.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212149191.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212302480.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212319683.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212344836.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212408491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202104252124279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212454369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210425212513437.png">
+<meta property="article:published_time" content="2021-04-25T13:33:08.980Z">
+<meta property="article:modified_time" content="2021-04-25T13:45:28.296Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210425211914642.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,103 +166,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MongDB安装历程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MongDB安装历程
+    </h1>
+  
+
+        
+        <a href="/2021/04/25/MongDB%E5%AE%89%E8%A3%85%E5%8E%86%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2021-04-25T13:33:08.980Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-25</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="这篇教程写的时候有些着急，有不足的地方还请谅解。谢谢"><a href="#这篇教程写的时候有些着急，有不足的地方还请谅解。谢谢" class="headerlink" title="这篇教程写的时候有些着急，有不足的地方还请谅解。谢谢~"></a>这篇教程写的时候有些着急，有不足的地方还请谅解。谢谢~</h1><p>​    <a id="more"></a></p>
+<h3 id="1-在mongodb的安装目录下创建data文件夹，E-MongoDB-mongodb-win32-x86-64-2008plus-ssl-3-6-10-data"><a href="#1-在mongodb的安装目录下创建data文件夹，E-MongoDB-mongodb-win32-x86-64-2008plus-ssl-3-6-10-data" class="headerlink" title="1. 在mongodb的安装目录下创建data文件夹，E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\data"></a>1. 在mongodb的安装目录下创建data文件夹，E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\data</h3><h3 id="2-在data文件夹内创建db文件夹和log文件夹"><a href="#2-在data文件夹内创建db文件夹和log文件夹" class="headerlink" title="2. 在data文件夹内创建db文件夹和log文件夹"></a>2. 在data文件夹内创建db文件夹和log文件夹</h3><h3 id="3-在cmd进入E-MongoDB-mongodb-win32-x86-64-2008plus-ssl-3-6-10-bin目录下，然后执行mongod-dbpath-E-MongoDB-mongodb-win32-x86-64-2008plus-ssl-3-6-10-data-db"><a href="#3-在cmd进入E-MongoDB-mongodb-win32-x86-64-2008plus-ssl-3-6-10-bin目录下，然后执行mongod-dbpath-E-MongoDB-mongodb-win32-x86-64-2008plus-ssl-3-6-10-data-db" class="headerlink" title="3.在cmd进入E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\bin目录下，然后执行mongod -dbpath E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\data\db"></a>3.在cmd进入E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\bin目录下，然后执行mongod -dbpath E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\data\db</h3><p>如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210425211914642.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这条命令是开启服务，它会一直运行，只要你要使用Mongodb，这个窗口就不能关）</p>
+<h3 id="4-然后在bin目录下另外打开一个cmd-在bin目录下执行mongo命令，之后就能正常使用了！！！如图"><a href="#4-然后在bin目录下另外打开一个cmd-在bin目录下执行mongo命令，之后就能正常使用了！！！如图" class="headerlink" title="4.然后在bin目录下另外打开一个cmd  在bin目录下执行mongo命令，之后就能正常使用了！！！如图"></a>4.然后在bin目录下另外打开一个cmd  在bin目录下执行mongo命令，之后就能正常使用了！！！如图</h3><p><img src="https://img-blog.csdnimg.cn/2021042521210735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="5-在浏览器输入http-127-0-0-1-27017"><a href="#5-在浏览器输入http-127-0-0-1-27017" class="headerlink" title="5.在浏览器输入http://127.0.0.1:27017/"></a>5.在浏览器输入<a href="http://127.0.0.1:27017/" target="_blank" rel="noopener">http://127.0.0.1:27017/</a></h3><p>若出现如图<br><img src="https://img-blog.csdnimg.cn/20210425212128750.png" alt="在这里插入图片描述"></p>
+<p>说明安装成功。</p>
+<h3 id="6-但每次需要手动启动mongodb服务，则不方便，所以我们把它加入到系统服务中。（若有问题，这一步可能需要提前做）"><a href="#6-但每次需要手动启动mongodb服务，则不方便，所以我们把它加入到系统服务中。（若有问题，这一步可能需要提前做）" class="headerlink" title="6.但每次需要手动启动mongodb服务，则不方便，所以我们把它加入到系统服务中。（若有问题，这一步可能需要提前做）"></a>6.但每次需要手动启动mongodb服务，则不方便，所以我们把它加入到系统服务中。（若有问题，这一步可能需要提前做）</h3><p>把E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\bin加入到系统变量path中。如图<br><img src="https://img-blog.csdnimg.cn/20210425212149191.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="7-在data-log文件夹内创建空的mongod-log文件"><a href="#7-在data-log文件夹内创建空的mongod-log文件" class="headerlink" title="7.在data\log文件夹内创建空的mongod.log文件"></a>7.在data\log文件夹内创建空的mongod.log文件</h3><h3 id="8-在mongdb主目录下创建mongod-cfg文件，输入"><a href="#8-在mongdb主目录下创建mongod-cfg文件，输入" class="headerlink" title="8.在mongdb主目录下创建mongod.cfg文件，输入"></a>8.在mongdb主目录下创建mongod.cfg文件，输入</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemLog:</span><br><span class="line">    destination: file</span><br><span class="line">    path: E:\MongoDB\mongodb-win32-x86_64-<span class="number">2008</span>plus-ssl-<span class="number">3.6</span><span class="number">.10</span>\data\log\mongod.log</span><br><span class="line">storage:</span><br><span class="line">    dbPath: E:\MongoDB\mongodb-win32-x86_64-<span class="number">2008</span>plus-ssl-<span class="number">3.6</span><span class="number">.10</span>\data\db</span><br></pre></td></tr></table></figure>
+
+
+<p>如图：<br><img src="https://img-blog.csdnimg.cn/20210425212302480.png" alt="在这里插入图片描述"></p>
+<p>保存。</p>
+<h3 id="9-cmd进入到bin目录下输入"><a href="#9-cmd进入到bin目录下输入" class="headerlink" title="9.cmd进入到bin目录下输入"></a>9.cmd进入到bin目录下输入</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mongod.exe --dbpath <span class="string">"E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\data"</span> --logpath <span class="string">"E:\MongoDB\mongodb-win32-x86_64-2008plus-ssl-3.6.10\data\log\mongod.log"</span> --install --serviceName <span class="string">"MongoDB"</span></span><br></pre></td></tr></table></figure>
+
+<p>如图<br><img src="https://img-blog.csdnimg.cn/20210425212319683.png" alt="在这里插入图片描述"></p>
+<p>打开系统服务就可以看到mongdb服务了<br><img src="https://img-blog.csdnimg.cn/20210425212344836.png" alt="在这里插入图片描述"></p>
+<p>打开cmd管理员。<br><img src="https://img-blog.csdnimg.cn/20210425212408491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/202104252124279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>若果不是用管理员运行，直接cmd会出现如图错误<br><img src="https://img-blog.csdnimg.cn/20210425212454369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY1MTA2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="10-在浏览器打开"><a href="#10-在浏览器打开" class="headerlink" title="10.在浏览器打开"></a>10.在浏览器打开</h3><p><img src="https://img-blog.csdnimg.cn/20210425212513437.png" alt="在这里插入图片描述"></p>
+<p>即成功了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-06-27T08:23:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">个人博客搭建</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/04/25/MongDB%E5%AE%89%E8%A3%85%E5%8E%86%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-06-23T16:42:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/27/Day2HelloWorld/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Day2HelloWorld</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第二篇博客文章</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/23/hello-world/" class="archive-article-date">
-  	<time datetime="2020-06-23T14:46:47.883Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/23/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
